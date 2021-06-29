@@ -36,14 +36,14 @@ const Header = () => {
         <div
           className="p-5 text-center bg-image"
           style={{
-            backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg')",
+            backgroundImage: "url('https://th.bing.com/th/id/R955794765a46cc7a46341a22cfdb1fad?rik=sv2ekRXYqhAsbg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2019%2f01%2fOnline-shopping.jpg&ehk=xmDj627D3Bod%2bHDa6MiHdTK3EFWPeWaRsidA14WHEj8%3d&risl=&pid=ImgRaw')",
             height: "400px"
             }}>
           <div className="mask" style={{backgroundColor: "rgba(0, 0, 0, 0.6)"}}>
             <div className="d-flex justify-content-center align-items-center h-100">
               <div className="text-white">
-                <h1 className="mb-3">Heading</h1>
-                <h4 className="mb-3">Subheading</h4>
+                <h1 className="mb-3">Super tiendas</h1>
+                <h4 className="mb-3" style={{color: "royalblue"}}>Grandes ahorros!!! </h4>
                 <a className="btn btn-outline-light btn-lg" href="#!" role="button"
                   >Call to action</a>
               </div>
