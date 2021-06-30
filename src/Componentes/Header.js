@@ -21,13 +21,16 @@ const Header = () => {
                   <a className="nav-link" aria-current="page" href="https://www.google.com">Home</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.google.com">Features</a>
+                  <a className="nav-link" href="https://www.google.com">Cuenta</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.google.com">Pricing</a>
+                  <a className="nav-link" href="https://www.google.com">Busqueda</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.google.com">About</a>
+                  <a className="nav-link" href="https://www.google.com">Ofertas!</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="https://www.google.com">Carrito</a>
                 </li>
               </ul>
             </div>
