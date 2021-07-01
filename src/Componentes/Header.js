@@ -21,16 +21,16 @@ const Header = () => {
                   <a className="nav-link" aria-current="page" href="https://www.google.com">Home</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.google.com">Cuenta</a>
+                <a className="nav-link" href="/Cuenta">Cuenta</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.google.com">Busqueda</a>
+                  <a className="nav-link" href="/Contacto">Contacto</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.google.com">Ofertas!</a>
+                <a className="nav-link" href="/Ofertas">Ofertas!!!</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.google.com">Carrito</a>
+                <a className="nav-link" href="/Carrito">Carrito</a>
                 </li>
               </ul>
             </div>
@@ -47,8 +47,14 @@ const Header = () => {
               <div className="text-white">
                 <h1 className="mb-3">Super tiendas</h1>
                 <h4 className="mb-3" style={{color: "royalblue"}}>Grandes ahorros!!! </h4>
-                <a className="btn btn-outline-light btn-lg" href="#!" role="button"
-                  >Call to action</a>
+                <div className="input-group">
+                  <div className="form-outline">
+                    <input type="search" id="form1" class="form-control" />
+                  </div>
+                    <button type="button" className="btn btn-primary"> search
+                      <i className="fas fa-search"></i>
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
