@@ -1,38 +1,28 @@
+import React, { useReducer } from "react";
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from "../src/Componentes/Header";
-import Main from "../src/Secciones/Main";
-import Contacto from "../src/Secciones/Contacto";
-import Cuenta from "../src/Secciones/Cuenta";
-import Ofertas from "../src/Secciones/Ofertas";
-import Carrito from "../src/Secciones/Carrito";
-import Footer from "../src/Secciones/Footer";
+import routes from "./config/Routes";
+import { AuthProvider } from "./context";
+import AppRoutes from "../src/Componentes/AppRoutes";
 
 function App() {
   return (
 
-      
-      <Router>
-
-        <Header/>
-        
-        
+    <AuthProvider>
+    <Router>
         <Switch>
-          {/* Definir un componente por ruta */}
-          <Route exact path= "/Contacto" component={Contacto}/>
-
-          <Route exact path="/Cuenta" component={Cuenta}/>
-
-          <Route exact path='/Ofertas' component={Ofertas}/>
-
-          <Route exact path='/Carrito' component={Carrito}/>
-
+            {routes.map((route) => (
+                <AppRoutes //COMPONENTE CREADO PARA RENDERIZAR A CADA UNA DE LAS RUTAS SEAN PUBLICAS O PRIVADAS (REEMPLAZA AL <ROUTE/> DEL ROUTER-DOM)
+                    key={route.path}
+                    path={route.path}
+                    component={route.component}
+                    isPrivate={route.isPrivate}
+                />
+            ))}
         </Switch>
-        <Main/>
-        <Footer/>
-      </Router>
-
-  );
+    </Router>
+</AuthProvider>
+);
 }
 
 export default App;

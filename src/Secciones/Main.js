@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Card from "../Componentes/Card";
+import Header from "../Componentes/Header";
 
 const Main = () => {
+    
     const [productos, setProductos] = useState([]);
     const getProductos = () => {
         console.log('Función GET');
@@ -17,11 +19,16 @@ const Main = () => {
     useEffect(() => {
         getProductos();
     }, []);
+    
     return (
-        <div className="container bg-primary ">
-            <h1>Productos</h1>
+        <div className=" bg-primary ">
+            <div>
+                <Header/>
+            </div>
+           <h1>Productos</h1>
 
             <div className="d-flex flex-wrap justify-content-around">
+                
                 {
                     Object.keys(productos).map(identificador => 
                         <Card 
