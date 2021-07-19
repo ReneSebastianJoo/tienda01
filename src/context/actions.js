@@ -32,3 +32,27 @@ export async function logout(dispatch) {
     localStorage.removeItem("token");
 }
 
+//Creamos el register new user:
+export async function registerUser(dispatch, loginPayload) {
+    const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(loginPayload),
+    };
+
+    try {
+        dispatch({ type: "REQUEST_REGISTER" });
+        let response = await fetch(`${ROOT_URL}/register`, requestOptions);
+        let data = await response.json();
+
+        if (data) {
+            dispatch({ type: "REGISTER_SUCCESS", payload: data });
+            localStorage.setItem("currentUser", JSON.stringify(data));
+            return data;
+        }
+        dispatch({ type: "REGISTER_ERROR", error: data.message });
+        return;
+    } catch (error) {
+        dispatch({ type: "REGISTER_ERROR", error: error });
+    }
+}

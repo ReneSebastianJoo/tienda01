@@ -19,6 +19,10 @@ const routes = [
         isPrivate: true, //PROPIEDAD QUE SIRVE PARA ESTABLECER A UNA RUTA PRIVADA
     },
     {
+        path: "/",
+        component: Home,
+    },
+    {
         path: "/Home",
         component: Home,
     },

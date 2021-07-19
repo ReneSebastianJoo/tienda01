@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from "../Componentes/Card";
 import Header from "../Componentes/Header";
+import InfoModal from '../Componentes/infoModal';
 
 const Main = () => {
     
@@ -24,6 +25,7 @@ const Main = () => {
         <div className=" bg-primary ">
             <div>
                 <Header/>
+                <InfoModal/>
             </div>
            <h1>Productos</h1>
 
